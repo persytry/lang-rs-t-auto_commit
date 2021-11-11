@@ -125,6 +125,7 @@ Description=gen auto_commit service
 After=network.target
 
 [Service]
+User=root
 ExecStart=auto_commit -c {}
 
 [Install]
@@ -164,7 +165,7 @@ fn exec(dir: &String, cmd: &str, args: &[&str]){
 
 fn main() {
     if let Some(cfg_path) = parse_args(){
-        let cfg: Cfg = serde_json::from_str(&fs::read_to_string(cfg_path).unwrap()).unwrap();
+        let cfg: Cfg = serde_json::from_str(&fs::read_to_string(&cfg_path).expect(&format!("config file open failed:{}", &cfg_path))).unwrap();
         run(&cfg);
     }
 }
