@@ -60,7 +60,7 @@ impl Cfg{
             }
         }
         let mut dirs = Vec::new();
-        for entry in fs::read_dir(dir).unwrap(){
+        for entry in fs::read_dir(dir).expect(&format!("can not read dir:{}", dir)){
             let entry = entry.unwrap();
             let path;
             if entry.file_type().unwrap().is_symlink(){
