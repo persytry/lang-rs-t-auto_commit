@@ -32,7 +32,7 @@ impl Cfg{
             delta_seconds: 60 * 60 * 13,
             include: vec![
                 CfgItem{ need_commit: false, dir: "/root/repo".to_string() },
-                CfgItem{ need_commit: true, dir: "/root/git/lang/py/finance/asset".to_string() }
+                CfgItem{ need_commit: true, dir: "/root/a/git/lang/py/finance/asset".to_string() }
             ],
             exclude: vec!["/root".to_string()],
         }
