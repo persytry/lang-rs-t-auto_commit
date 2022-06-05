@@ -31,10 +31,10 @@ impl Cfg{
         Cfg{
             delta_seconds: 60 * 60 * 13,
             include: vec![
-                CfgItem{ need_commit: false, dir: "/root/repo".to_string() },
-                CfgItem{ need_commit: true, dir: "/root/a/git/lang/py/finance/asset".to_string() }
+                CfgItem{ need_commit: false, dir: "/home/persy/repo".to_string() },
+                CfgItem{ need_commit: true, dir: "/home/persy/a/git/lang/py/finance/asset".to_string() }
             ],
-            exclude: vec!["/root".to_string()],
+            exclude: vec!["/home/persy".to_string()],
         }
     }
 
@@ -125,7 +125,7 @@ Description=gen auto_commit service
 After=network.target
 
 [Service]
-User=root
+User=persy
 ExecStart=auto_commit -c {}
 
 [Install]
