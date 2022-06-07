@@ -31,10 +31,10 @@ impl Cfg{
         Cfg{
             delta_seconds: 60 * 60 * 13,
             include: vec![
-                CfgItem{ need_commit: false, dir: "/home/persy/repo".to_string() },
+                CfgItem{ need_commit: false, dir: "/home/persy/data/code/repo".to_string() },
                 CfgItem{ need_commit: true, dir: "/home/persy/a/git/lang/py/finance/asset".to_string() }
             ],
-            exclude: vec!["/home/persy".to_string()],
+            exclude: vec!["/home/persy/data/code".to_string()],
         }
     }
 
